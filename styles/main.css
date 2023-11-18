@@ -1,3 +1,20 @@
+/* NOTE */
+/* Selector Specificity 
+  
+    TYPE --> p {}, h2 {}, article {} --> 1
+   
+    CLASS --> .btn {}, .leading {} --> 10
+  
+    ID --> #gallery {} --> 100
+  
+    --- examples ---
+   
+    .btn {} --> 10
+  
+    .main-content article a {} --> 10 + 1 + 1 = 12
+  
+*/
+
 /* reset */
 body {
     font-family: 'Rubik';
@@ -118,18 +135,25 @@ article footer {
     text-align: center;
 }
 
-/* Selector Specificity 
-  
-    TYPE --> p {}, h2 {}, article {} --> 1
-   
-    CLASS --> .btn {}, .leading {} --> 10
-  
-    ID --> #gallery {} --> 100
-  
-    --- examples ---
-   
-    .btn {} --> 10
-  
-    .main-content article a {} --> 10 + 1 + 1 = 12
-  
-*/
+/* any selectors defined outside of layers has presedance over styles defined inside layers */
+
+@layer ui {
+    .btn {
+        background: #1c9f6d;
+        color: #fff;
+        padding: 8px 12px;
+        border-radius: 8px;
+        text-decoration: none;
+        display: inline-block;
+    }
+}
+
+@layer content {
+    .main-content article a {
+        color: var(--primary);
+        background: transparent;
+        text-decoration: underline;
+    }
+}
+
+/* when both styles are in layers, the layer that is defined lover in the CSS file "wins" */
