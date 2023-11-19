@@ -96,21 +96,21 @@ article footer {
     justify-content: space-between;
 }
 
-.main-content article a {
+/* .main-content article a {
     color: var(--primary);
     background: transparent;
     text-decoration: underline;
-}
+} */
 
 /* components */
-.btn {
+/* .btn {
     background: #1c9f6d;
     color: #fff;
     padding: 8px 12px;
     border-radius: 8px;
     text-decoration: none;
     display: inline-block;
-}
+} */
 
 .card {
     background: white;
@@ -156,4 +156,5 @@ article footer {
     }
 }
 
+/* order of the layers matters */
 /* when both styles are in layers, the layer that is defined lover in the CSS file "wins" */
