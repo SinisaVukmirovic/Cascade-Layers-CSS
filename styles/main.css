@@ -1,0 +1,12 @@
+@layer reset, theme, bulma, layout, content, components, utility;
+
+/* importing different style sheets */
+/* order here doesn't matter if we defined order above in layer */
+@import "reset.css" layer(reset);
+@import "theme.css" layer(theme);
+@import "layout.css" layer(layout);
+@import "content.css" layer(content);
+@import "components.css" layer(components);
+@import "utils.css" layer(utility);
+/* importing a 3rd party layer */
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" layer(bulma);
